@@ -1,0 +1,59 @@
+Test Plan 
+
+
+Feature: timer
+
+Test 1
+- start a game
+- Wait 30 seconds
+Result -> Game Over
+
+Test 2
+- Start a game
+- change the tab
+- return the game after 35 seconds
+
+Feature: movement
+
+Test 1
+- Start a game
+- click on the right to start
+- click on the right to move
+result: is moved to the right
+
+Test 2
+- Start a game
+- click on the right to start
+- click on left to move
+result: is moved to the left
+
+Test 3
+- Start a game
+- click on the right to start
+- click on up
+result: is jumping
+
+Test 4
+- Start a game
+- click on the down to start
+- click on up
+result: the dog waits but the enemies do not
+
+Feature: lives
+
+Test 1
+- Start a game
+- lose the lives
+result: game over and you can start again
+
+Test 2
+- Start a game with 999 lives
+result: You should have an icon with the number of lives instead of an unlimited dogs icons
+
+Test 3
+- Start a game with 0 lives
+result: The game can not be started
+
+
+
+

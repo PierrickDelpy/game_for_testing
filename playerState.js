@@ -110,10 +110,12 @@ export class Rolling extends State {
             this.game.player.setState(states.RUNNING, 1);
         } else if(!input.includes('Enter') && !this.game.player.onGround()){
             this.game.player.setState(states.FALLING, 1);
-        } else if(input.includes('Enter') && input.includes('ArrowUp') &&this.game.player.onGround()){
+        } else if(input.includes('Enter') && input.includes('ArrowUp') && this.game.player.onGround()){
             this.game.player.vy -= 27;
         } else if (input.includes('ArrowDown') && !this.game.player.onGround()){
             this.game.player.setState(states.DIVING, 0);
+        } else if (input.includes('ArrowUp') && this.game.player.onGround()){
+            this.game.player.setState(states.RUNNING, 1);
         }
     }
 }

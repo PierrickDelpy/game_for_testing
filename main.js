@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
         }
         update(deltaTime){
             this.time += deltaTime;
-            if(this.time > this.maxTime) {
+            if(this.time >= this.maxTime || this.score >= this.winningScore) 
                 this.gameOver = true;
                 this.time = this.maxTime
             }
